@@ -1,6 +1,6 @@
 {
   "name": "crochetfeve0251/rocket-launcher-uninstaller-take-off",
-  "description": "Initialisation library for psr4 plugin",
+  "description": "Uninstaller library for psr4 plugin",
   "minimum-stability": "stable",
   "license": "proprietary",
   "type": "library",
