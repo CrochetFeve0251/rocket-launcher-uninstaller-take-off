@@ -29,5 +29,12 @@
     "psr-4": {
       "RocketLauncherUninstallTakeOff\\Tests\\": "tests/"
     }
+  },
+  "extra": {
+    "rocket-laucher": {
+      "provider" : "RocketLauncherUninstallTakeOff\\ServiceProvider",
+      "command": "uninstaller:initialize",
+      "install": true
+    }
   }
 }
