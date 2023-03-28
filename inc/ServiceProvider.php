@@ -10,7 +10,6 @@ use RocketLauncherBuilder\ServiceProviders\ServiceProviderInterface;
 use RocketLauncherBuilder\Templating\Renderer;
 use RocketLauncherUninstallTakeOff\Commands\InstallCommand;
 use RocketLauncherUninstallTakeOff\Services\AssetsManager;
-use RocketLauncherUninstallTakeOff\Services\ConfigsManager;
 use RocketLauncherUninstallTakeOff\Services\ProjectManager;
 
 class ServiceProvider implements ServiceProviderInterface
@@ -63,8 +62,7 @@ class ServiceProvider implements ServiceProviderInterface
 
         $assets_manager = new AssetsManager($this->filesystem, $this->renderer, $this->configs);
         $project_manager = new ProjectManager($this->filesystem);
-        $config_manager = new ConfigsManager($this->filesystem, $this->configs);
-        $app->add(new InstallCommand($assets_manager, $project_manager, $config_manager));
+        $app->add(new InstallCommand($assets_manager, $project_manager));
         return $app;
     }
 }

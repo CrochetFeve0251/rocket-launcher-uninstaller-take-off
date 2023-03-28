@@ -12,6 +12,7 @@
   ],
   "require": {
     "crochetfeve0251/rocket-launcher-builder": "^1.0.0",
+    "crochetfeve0251/rocket-launcher-uninstaller": "^0.0.1",
     "ext-mbstring": "*",
     "ext-json": "*",
     "composer/composer": "^2.5"
