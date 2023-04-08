@@ -1,10 +1,10 @@
 <?php
 
-namespace RocketLauncherUninstallTakeOff\Commands;
+namespace LaunchpadUninstallTakeOff\Commands;
 
-use RocketLauncherBuilder\Commands\Command;
-use RocketLauncherUninstallTakeOff\Services\AssetsManager;
-use RocketLauncherUninstallTakeOff\Services\ProjectManager;
+use LaunchpadCLI\Commands\Command;
+use LaunchpadUninstallTakeOff\Services\AssetsManager;
+use LaunchpadUninstallTakeOff\Services\ProjectManager;
 
 class InstallCommand extends Command
 {
@@ -13,15 +13,9 @@ class InstallCommand extends Command
      */
     protected $assets_manager;
 
-    /**
-     * @var ProjectManager
-     */
-    protected $project_manager;
-
-    public function __construct(AssetsManager $assets_manager, ProjectManager $project_manager)
+    public function __construct(AssetsManager $assets_manager)
     {
         $this->assets_manager = $assets_manager;
-        $this->project_manager = $project_manager;
 
         parent::__construct('uninstaller:initialize', 'Initialize the uninstaller library');
 
@@ -35,8 +29,5 @@ class InstallCommand extends Command
 
     public function execute() {
         $this->assets_manager->create_uninstall_file();
-        $this->project_manager->add_library();
-        $this->project_manager->cleanup();
-        $this->project_manager->reload();
     }
 }

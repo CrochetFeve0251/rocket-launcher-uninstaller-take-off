@@ -1,8 +1,8 @@
 <?php
 
-namespace RocketLauncherUninstallTakeOff\Tests\Integration\inc\Commands\InstallCommand;
+namespace LaunchpadUninstallTakeOff\Tests\Integration\inc\Commands\InstallCommand;
 
-use RocketLauncherUninstallTakeOff\Tests\Integration\TestCase;
+use LaunchpadUninstallTakeOff\Tests\Integration\TestCase;
 
 class Test_Execute extends TestCase
 {

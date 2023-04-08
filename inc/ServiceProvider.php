@@ -1,16 +1,16 @@
 <?php
 
-namespace RocketLauncherUninstallTakeOff;
+namespace LaunchpadUninstallTakeOff;
 
 use League\Flysystem\Adapter\Local;
 use League\Flysystem\Filesystem;
-use RocketLauncherBuilder\App;
-use RocketLauncherBuilder\Entities\Configurations;
-use RocketLauncherBuilder\ServiceProviders\ServiceProviderInterface;
-use RocketLauncherBuilder\Templating\Renderer;
-use RocketLauncherUninstallTakeOff\Commands\InstallCommand;
-use RocketLauncherUninstallTakeOff\Services\AssetsManager;
-use RocketLauncherUninstallTakeOff\Services\ProjectManager;
+use LaunchpadCLI\App;
+use LaunchpadCLI\Entities\Configurations;
+use LaunchpadCLI\ServiceProviders\ServiceProviderInterface;
+use LaunchpadCLI\Templating\Renderer;
+use LaunchpadUninstallTakeOff\Commands\InstallCommand;
+use LaunchpadUninstallTakeOff\Services\AssetsManager;
+use LaunchpadUninstallTakeOff\Services\ProjectManager;
 
 class ServiceProvider implements ServiceProviderInterface
 {
@@ -61,8 +61,7 @@ class ServiceProvider implements ServiceProviderInterface
     {
 
         $assets_manager = new AssetsManager($this->filesystem, $this->renderer, $this->configs);
-        $project_manager = new ProjectManager($this->filesystem);
-        $app->add(new InstallCommand($assets_manager, $project_manager));
+        $app->add(new InstallCommand($assets_manager));
         return $app;
     }
 }

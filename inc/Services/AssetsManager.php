@@ -1,10 +1,10 @@
 <?php
 
-namespace RocketLauncherUninstallTakeOff\Services;
+namespace LaunchpadUninstallTakeOff\Services;
 
 use League\Flysystem\Filesystem;
-use RocketLauncherBuilder\Entities\Configurations;
-use RocketLauncherBuilder\Templating\Renderer;
+use LaunchpadCLI\Entities\Configurations;
+use LaunchpadCLI\Templating\Renderer;
 
 class AssetsManager
 {
