@@ -35,6 +35,7 @@
       "provider" : "LaunchpadUninstallTakeOff\\ServiceProvider",
       "command": "uninstaller:initialize",
       "install": true,
+      "clean": true,
       "libraries": {
         "wp-launchpad/uninstaller": "^0.0"
       }
