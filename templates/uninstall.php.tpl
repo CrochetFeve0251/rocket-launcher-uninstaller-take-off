@@ -2,7 +2,7 @@
 
 defined( 'WP_UNINSTALL_PLUGIN' ) || exit;
 
-use {{ base_namespace }}Dependencies\RocketLauncherUninstaller\Uninstall\Uninstall;
+use {{ base_namespace }}Dependencies\LaunchpadUninstaller\Uninstall\Uninstall;
 use {{ base_namespace }}Dependencies\League\Container\Container;
 
 $plugin_root_dir = dirname( __FILE__ );
