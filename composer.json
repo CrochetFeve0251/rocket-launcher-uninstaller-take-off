@@ -11,8 +11,8 @@
     }
   ],
   "require": {
-    "wp-launchpad/cli": "^1.0.0",
-    "wp-launchpad/uninstaller": "^0.0.2",
+    "wp-launchpad/cli": "^1.0",
+    "wp-launchpad/uninstaller": "^0.0",
     "ext-mbstring": "*",
     "ext-json": "*"
   },
@@ -36,7 +36,7 @@
       "command": "uninstaller:initialize",
       "install": true,
       "libraries": {
-        "wp-launchpad/uninstaller": "^0.0.2"
+        "wp-launchpad/uninstaller": "^0.0"
       }
     }
   }
