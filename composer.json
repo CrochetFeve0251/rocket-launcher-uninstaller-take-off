@@ -1,7 +1,7 @@
 {
   "name": "wp-launchpad/uninstaller-take-off",
   "description": "Uninstaller library for Launchpad framework",
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "license": "proprietary",
   "type": "library",
   "authors": [
