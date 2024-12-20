@@ -2,6 +2,7 @@
 
 defined( 'WP_UNINSTALL_PLUGIN' ) || exit;
 
+use {{ base_namespace }}Dependencies\LaunchpadDispatcher\Dispatcher;
 use {{ base_namespace }}Dependencies\LaunchpadUninstaller\Uninstall\Uninstall;
 use {{ base_namespace }}Dependencies\League\Container\Container;
 
@@ -13,7 +14,14 @@ require_once $plugin_root_dir . '/vendor/autoload.php';
 $params = require_once $plugin_root_dir . '/configs/parameters.php';
 $providers = require_once $plugin_root_dir . '/configs/providers.php';
 
-Uninstall::set_container(new Container());
+$container = new Container();
+if( key_exists('autowiring', $params) && $params['autowiring']) {
+	$reflection_container = new \LaunchpadCore\Container\Autowiring\Container();
+	$container->delegate( $reflection_container );
+}
+
+Uninstall::set_container($container);
+Uninstall::set_dispatcher(new Dispatcher());
 Uninstall::set_params($params);
 Uninstall::set_providers($providers);
 

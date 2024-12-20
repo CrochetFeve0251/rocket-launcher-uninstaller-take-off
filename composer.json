@@ -36,7 +36,7 @@
             "install": true,
             "clean": true,
             "libraries": {
-                "wp-launchpad/uninstaller": "^0.0"
+                "wp-launchpad/uninstaller": "^3.1"
             }
         }
     },

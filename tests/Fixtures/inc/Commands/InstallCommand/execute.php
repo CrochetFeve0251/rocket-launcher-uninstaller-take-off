@@ -47,14 +47,6 @@ return [
                         'exists' => true,
                         'content' => file_get_contents(__DIR__ . '/files/configs/providers.php')
                     ],
-                    'composer.json' => [
-                        'exists' => true,
-                        'content' => file_get_contents(__DIR__ . '/files/composer.json')
-                    ],
-                    'bin/generator' => [
-                        'exists' => true,
-                        'content' => file_get_contents(__DIR__ . '/files/bin/generator')
-                    ],
                     'uninstall.php' => [
                         'exists' => true,
                         'content' => file_get_contents(__DIR__ . '/files/uninstall.php')
